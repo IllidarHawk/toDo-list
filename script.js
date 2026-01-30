@@ -2,12 +2,15 @@
 let tasks = [];
 let taskIdCounter = 1;
 
+//TODO : Add inputs or prompts for user input
+
 /**
  * Function to add a new task.
  * @param {string} title - The task title.
  * @param {string} description - The task description.
  * @param {string} priority - The priority of the task (High, Medium, Low).
  * @param {string} dueDate - The due date of the task (format: YYYY-MM-DD).
+ * @param {boolean} isCompleted - If task completed?
  */
 function addTask(title, description, priority, dueDate) {
      // When invalid?
@@ -19,16 +22,37 @@ function addTask(title, description, priority, dueDate) {
             title: title,
             description: description,
             priority: priority,
-            dueDate: dueDate
+            dueDate: dueDate,
+            isCompleted: false
         })
     }
+    
+    //TODO: add callback values to object properties
 }
 
 /**
  * Function to display all tasks.
  */
-function viewTasks() {
-    console.log("viewTasks() called - Display all tasks");
+function viewTasks()
+
+{
+    //TODO : Can we omit the repeated "task."?
+
+    //TODO : Add class to properties to CSS them
+
+    //TODO : Add button next to each task title / under 
+   
+    for (const task of tasks) {
+        document.querySelector("p").innerHTML +=
+        `<span id="task${task.id}">
+        <h3>Task ${task.id}</h3>
+        Title: ${task.title} <br />
+        Description: ${task.description} <br />
+        Priority: ${task.priority} <br />
+        Due date: ${task.dueDate} <br />
+        </span>
+        <br />`;
+    }
 }
 
 /**
@@ -36,7 +60,7 @@ function viewTasks() {
  * @param {number} id - The ID of the task to mark as complete.
  */
 function markTaskAsComplete(id) {
-    console.log(`markTaskAsComplete() called with id: ${id}`);
+    ;
 }
 
 /**
