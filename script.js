@@ -36,30 +36,34 @@ function addTask(title, description, priority, dueDate) {
 function viewTasks()
 
 {
-    //TODO : Can we omit the repeated "task."?
-
-    //TODO : Add button next to each task title / under 
-   
+    // Clean .tasks section from previous tasks results
+    document.querySelector(".tasks").innerHTML = "";
+    
+    
+    // Load tasks (anew)
+    
+    //TODO : Can we omit the repeated "task."
+    
     for (const task of tasks) {
         document.querySelector(".tasks").innerHTML +=
         `<p id="task${task.id}">
-            <h3>Task #${task.id}</h3>
-            <span class="task-property-name"> Title: </span> 
-            ${task.title}  <br />
-            <span class="task-property-name"> Description: </span> 
-            ${task.description} <br />
-            <span class="task-property-name"> Priority: </span> 
-            ${task.priority} <br />
-            <span class="task-property-name"> Due date: </span> 
-            ${task.dueDate} <br />
+        <h3>Task #${task.id}</h3>
+        <span class="task-property-name"> Title: </span> 
+        ${task.title}  <br />
+        <span class="task-property-name"> Description: </span> 
+        ${task.description} <br />
+        <span class="task-property-name"> Priority: </span> 
+        ${task.priority} <br />
+        <span class="task-property-name"> Due date: </span> 
+        ${task.dueDate} <br />
         </p>`;
     }
 }
-
+    
 /**
  * Function to mark a task as complete.
  * @param {number} id - The ID of the task to mark as complete.
- */
+*/
 function markTaskAsComplete(id) {
     ;
 }
