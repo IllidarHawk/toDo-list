@@ -38,20 +38,21 @@ function viewTasks()
 {
     //TODO : Can we omit the repeated "task."?
 
-    //TODO : Add class to properties to CSS them
-
     //TODO : Add button next to each task title / under 
    
     for (const task of tasks) {
-        document.querySelector("p").innerHTML +=
-        `<span id="task${task.id}">
-        <h3>Task ${task.id}</h3>
-        Title: ${task.title} <br />
-        Description: ${task.description} <br />
-        Priority: ${task.priority} <br />
-        Due date: ${task.dueDate} <br />
-        </span>
-        <br />`;
+        document.querySelector(".tasks").innerHTML +=
+        `<p id="task${task.id}">
+            <h3>Task #${task.id}</h3>
+            <span class="task-property-name"> Title: </span> 
+            ${task.title}  <br />
+            <span class="task-property-name"> Description: </span> 
+            ${task.description} <br />
+            <span class="task-property-name"> Priority: </span> 
+            ${task.priority} <br />
+            <span class="task-property-name"> Due date: </span> 
+            ${task.dueDate} <br />
+        </p>`;
     }
 }
 
