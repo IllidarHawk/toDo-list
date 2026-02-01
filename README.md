@@ -26,4 +26,19 @@ This project is about to contain:
 
 
   
-##### *No project reference at the moment*
+##### *No project reference at the moment*  
+
+______  
+## <img width="20" height="20" alt="under construction sign" src="https://github.com/user-attachments/assets/4f4b4461-fbb4-44b9-837c-84d3f68f1b3c" /> Under Contruction <img width="20" height="20" alt="under construction sign" src="https://github.com/user-attachments/assets/4f4b4461-fbb4-44b9-837c-84d3f68f1b3c" />
+
+### Disclaimers - Notes  
+
+<p><img width="20" height="20" alt="attention" src="https://github.com/user-attachments/assets/900d4461-c7bb-4355-bb83-f2c1c8460502" />  
+&nbsp;At the very bottom of the file are hard-coded functions to test proper functionality, before adding buttons.</p>
+<p><img width="20" height="20" alt="attention" src="https://github.com/user-attachments/assets/900d4461-c7bb-4355-bb83-f2c1c8460502" />  
+&nbsp;This project was about to be implemented using only console.log for the functions output, code that is now deleted, hence the empty function blocks.
+I am attempting to take it further by transforming it into a proper app.</p>
+
+
+*Thanks for your understanding*
+
