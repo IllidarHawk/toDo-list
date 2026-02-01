@@ -1,3 +1,9 @@
+//! AT THE BOTTOM OF THE FILE THERE ARE HARD WRITTEN FUNCTION CALLS TO TEST PROPER FUNCTIONALITY
+//? THE PROJECT WAS ABOUT TO BE IMPLEMENTED ONLY WITH CONSOLE.LOG IN CLASS, BUT I'M TAKING IT FURTHER BY TRYING TO MAKE IT A PROPER FUNCTIONAL SITE
+
+//? THANKS FOR YOUR UNDERSTANDING
+
+
 // Array to store tasks
 let tasks = [];
 let taskIdCounter = 1;
@@ -13,6 +19,7 @@ let taskIdCounter = 1;
  * @param {boolean} isCompleted - If task completed?
  */
 function addTask(title, description, priority, dueDate) {
+    
      // When invalid?
     if (!title) {
         alert("Cannot add task without title");
@@ -34,7 +41,6 @@ function addTask(title, description, priority, dueDate) {
  * Function to display all tasks.
  */
 function viewTasks()
-
 {
     // Clean .tasks section from previous tasks results
     document.querySelector(".tasks").innerHTML = "";
@@ -73,7 +79,7 @@ function markTaskAsComplete(id) {
  * @param {number} id - The ID of the task to delete.
  */
 function deleteTask(id) {
-    console.log(`deleteTask() called with id: ${id}`);
+    
 }
 
 /**
@@ -81,7 +87,7 @@ function deleteTask(id) {
  * @param {string} priority - "High", "Medium", or "Low".
  */
 function filterTasksByPriority(priority) {
-    console.log(`filterTasksByPriority() called with priority: "${priority}"`);
+   
 }
 
 /**
@@ -89,7 +95,7 @@ function filterTasksByPriority(priority) {
  * @param {boolean} isOverdue - true for overdue tasks, false for upcoming tasks.
  */
 function filterTasksByDueDate(isOverdue) {
-    console.log(`filterTasksByDueDate() called with isOverdue: ${isOverdue}`);
+    
 }
 
 /**
@@ -97,21 +103,21 @@ function filterTasksByDueDate(isOverdue) {
  * @param {boolean} isComplete - true for completed tasks, false for incomplete tasks.
  */
 function filterTasksByCompletionStatus(isComplete) {
-    console.log(`filterTasksByCompletionStatus() called with isComplete: ${isComplete}`);
+    
 }
 
 /**
  * Function to sort tasks by priority.
  */
 function sortTasksByPriority() {
-    console.log("sortTasksByPriority() called - Sort tasks by priority");
+    
 }
 
 /**
  * Function to sort tasks by due date.
  */
 function sortTasksByDueDate() {
-    console.log("sortTasksByDueDate() called - Sort tasks by due date");
+    
 }
 
 /**
@@ -122,16 +128,14 @@ function sortTasksByDueDate() {
  * @param {string} newDueDate - The new due date (optional).
  */
 function editTask(id, newTitle, newDescription, newDueDate) {
-    console.log(
-        `editTask() called with id: ${id}, newTitle: "${newTitle || 'unchanged'}", newDescription: "${newDescription || 'unchanged'}", newDueDate: "${newDueDate || 'unchanged'}"`
-    );
+    
 }
 
 /**
  * Function to save tasks to localStorage.
  */
 function saveTasks() {
-    console.log("saveTasks() called - Save tasks to localStorage");
+    
 }
 
 /**
@@ -162,30 +166,30 @@ viewTasks();
 markTaskAsComplete(2);
 
 // Filtering tasks by priority
-filterTasksByPriority("High");
+//filterTasksByPriority("High");
 
 // Filtering tasks by due date
-filterTasksByDueDate(true); // Show overdue tasks
-filterTasksByDueDate(false); // Show upcoming tasks
+//filterTasksByDueDate(true); // Show overdue tasks
+//filterTasksByDueDate(false); // Show upcoming tasks
 
 // Filtering tasks by completion status
-filterTasksByCompletionStatus(false); // Show incomplete tasks
+//filterTasksByCompletionStatus(false); // Show incomplete tasks
 
 // Sorting tasks
-sortTasksByPriority();
-sortTasksByDueDate();
+//sortTasksByPriority();
+//sortTasksByDueDate();
 
 // Editing a task
-editTask(1, "Buy Groceries and Snacks", "Buy milk, eggs, snacks, and bread.", "2024-06-21");
-viewTasks();
+//editTask(1, "Buy Groceries and Snacks", "Buy milk, eggs, snacks, and bread.", "2024-06-21");
+//viewTasks();
 
 // Deleting a task
-deleteTask(3);
+//deleteTask(3);
 viewTasks();
 
 // Saving and Loading tasks
-saveTasks();
-loadTasks();
+//saveTasks();
+//loadTasks();
 
-// Counting tasks
-countTasks();
+//// Counting tasks
+//countTasks();
