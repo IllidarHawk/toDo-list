@@ -55,6 +55,7 @@ function viewTasks()
         `<article id="task${task.id}">
             <h3 class="task-heading">
                 <span class="task-title"> Task #${task.id} </span>
+                <button id="${task.id}" class="markCompleted-btn" type="button"> </button>
             </h3> 
             <p class="task-info">
                 <span class="task-property-name"> Title: </span> 
@@ -74,8 +75,23 @@ function viewTasks()
  * Function to mark a task as complete.
  * @param {number} id - The ID of the task to mark as complete.
 */
-function markTaskAsComplete(id) {
-    ;
+function markTaskAsCompleted(id) {
+
+    //TODO : (At taskView()) Add at tick button an onclick atrr
+
+    //when chicked do as follows
+
+    //TODO : Find task index
+    let completedTaskIndex = tasks.findIndex( (task) => task.id === id);
+
+    //TODO : Animate task completion
+    
+    //TODO : Using index, delete task from tasks array
+    tasks.splice(completedTaskIndex, 1); 
+    
+    //TODO : Show updated version of tasks (END)
+    //viewTasks();
+    
 }
 
 /**
@@ -167,7 +183,7 @@ addTask("Study JavaScript", "Practice arrays, objects, and functions.", "Low", "
 viewTasks();
 
 // Marking a task as complete
-markTaskAsComplete(2);
+markTaskAsCompleted(2);
 
 // Filtering tasks by priority
 //filterTasksByPriority("High");
