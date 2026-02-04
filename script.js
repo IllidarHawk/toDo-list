@@ -52,17 +52,21 @@ function viewTasks()
     
     for (const task of tasks) {
         document.querySelector(".tasks").innerHTML +=
-        `<p id="task${task.id}">
-        <h3>Task #${task.id}</h3>
-        <span class="task-property-name"> Title: </span> 
-        ${task.title}  <br />
-        <span class="task-property-name"> Description: </span> 
-        ${task.description} <br />
-        <span class="task-property-name"> Priority: </span> 
-        ${task.priority} <br />
-        <span class="task-property-name"> Due date: </span> 
-        ${task.dueDate} <br />
-        </p>`;
+        `<article id="task${task.id}">
+            <h3 class="task-heading">
+                <span class="task-title"> Task #${task.id} </span>
+            </h3> 
+            <p class="task-info">
+                <span class="task-property-name"> Title: </span> 
+            ${task.title} <br />
+                <span class="task-property-name"> Description: </span> 
+            ${task.description} <br />
+                <span class="task-property-name"> Priority: </span> 
+            ${task.priority} <br />
+                <span class="task-property-name"> Due date: </span> 
+            ${task.dueDate}
+            </p>
+        </article>`;
     }
 }
     
