@@ -46,17 +46,20 @@ function viewTasks()
     document.querySelector(".tasks").innerHTML = "";
     
     
-    // Load tasks (anew)
-    
     //TODO : Can we omit the repeated "task."
-    
+    // Load tasks (anew)
     for (const task of tasks) {
         document.querySelector(".tasks").innerHTML +=
         `<article id="task${task.id}">
-            <h3 class="task-heading">
-                <span class="task-title"> Task #${task.id} </span>
-                <button id="${task.id}" class="markCompleted-btn" type="button"> </button>
-            </h3> 
+            <div class="task-header">
+                <h3>
+                    <span class="task-title"> Task #${task.id} </span>
+                </h3>
+                <div class="tickButton">
+                    <input class="markDone" type="checkbox" />
+                    <i class="fa-solid fa-check fa-xl" style="color: #808080"></i>
+                </div>
+            </div>
             <p class="task-info">
                 <span class="task-property-name"> Title: </span> 
             ${task.title} <br />
@@ -174,6 +177,8 @@ function countTasks() {
 
 /* Sample Function Calls for Testing */
 
+
+
 // Adding tasks with priority and due date
 addTask("Buy Groceries", "Buy milk, eggs, and bread.", "High", "2024-06-20");
 addTask("Clean Room", "Vacuum and mop the living room.", "Medium", "2024-06-25");
@@ -183,7 +188,7 @@ addTask("Study JavaScript", "Practice arrays, objects, and functions.", "Low", "
 viewTasks();
 
 // Marking a task as complete
-markTaskAsCompleted(2);
+//markTaskAsCompleted(2);
 
 // Filtering tasks by priority
 //filterTasksByPriority("High");
