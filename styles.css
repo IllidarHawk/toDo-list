@@ -14,15 +14,16 @@ h2 {
     height: auto;
 }
 
-.tasks h3.task-heading {
-    display: flex;
-    align-items: end;
-    gap: 14px;
-}
-
 .tasks h3 > span.task-title {
     text-decoration: underline;
 }
+
+
+.task-header {
+    display: flex;
+    gap: 15px;
+}
+
 
 .tasks p.task-info {
     margin: 14px 0px 30px;
@@ -30,15 +31,58 @@ h2 {
     font-size: 16px;
 }
 
-.tasks .markCompleted-btn {
+div.tickButton {
     position: relative;
-    width: 22px;
-    height: 22px;
+}
+
+
+.markDone {
+    position: absolute;
+    top: -1px;
+    width: 25px;
+    height: 25px;
+    appearance: none;
     border-style: dashed;
     border-radius: 50px;
     border-width: 2px;
     border-color: rgb(71, 236, 71);
+    cursor: pointer;
+    transition: background-color 0.15s ease-in;
 }
+
+.markDone:checked {
+    background-color: rgb(71, 236, 71);
+}
+
+.fa-check {
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    display: none;
+
+}
+
+.markDone:checked + .fa-check {
+        display: block;
+     }
+
+
+
+
+/* .checkIfDone-btn > .fa-solid {
+    position: relative;
+    right: 1px;
+    top: -2px;
+    opacity: 0;
+} */
+
+/* .checkIfDone:hover {
+    opacity: 0.5;
+} */
+
+/* .markCompleted-btn > .fa-solid:active {
+    opacity: 1;
+} */
 
 span.task-property-name {
     font-weight: 700;
